@@ -1,6 +1,6 @@
 name: custom_route_transitions_ex_plugin_01
 description: "A transition package for Flutter that provides a set of pre-defined transitions for learning purposes."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/von-maurus/route_transitions_plugin_ex.git
 
 environment:
