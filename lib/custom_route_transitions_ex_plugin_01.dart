@@ -31,7 +31,8 @@ class RouteTransitions {
 
   void _push(Route route) => Navigator.push(context, route);
 
-  void _pushReplacement(Route route) => Navigator.pushReplacement(context, route);
+  void _pushReplacement(Route route) =>
+      Navigator.pushReplacement(context, route);
 
   void _navigateNormal() {
     final route = MaterialPageRoute(builder: (_) => child);
@@ -88,7 +89,10 @@ class RouteTransitions {
     return PageRouteBuilder<T>(
       pageBuilder: (context, animation, secondaryAnimation) => page,
       transitionsBuilder: (context, animation, secondaryAnimation, child) {
-        final offsetAnimation = Tween<Offset>(begin: const Offset(1.0, 0.0), end: Offset.zero).animate(animation);
+        final offsetAnimation = Tween<Offset>(
+          begin: const Offset(1.0, 0.0),
+          end: Offset.zero,
+        ).animate(animation);
         return SlideTransition(position: offsetAnimation, child: child);
       },
     );
